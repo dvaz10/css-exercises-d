@@ -1,1 +1,39 @@
 /* Add CSS Styling */
+
+.odd {
+    background-color: #E8828A;
+    font-family: Verdana, "DejaVu Sans", sans-serif;
+}
+
+#second {
+    color: rgb(0, 0, 250);
+    font-size: 32px;
+
+}
+
+#third {
+    font-size: 24px;
+}
+
+#forth {
+    background-color: hsl(120, 73%, 75%); 
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/*
+    In the id selector 'four' below, we could have also
+    added a rule to set the font size to 24px.
+
+    However, since the elements 'Number 3' and 'Number 4'
+    in the HTML file share the same font size, we reused
+    the 'adjust-font-size' class above to help reduce
+    duplicate code.
+
+    Example:  
+    .adjust-font-size {
+  font-size: 24px;
+}
+
+Include this as another class in the elements that need 24px class= " class1 class2"
+*/
