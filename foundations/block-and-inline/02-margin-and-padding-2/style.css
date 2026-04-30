@@ -6,31 +6,36 @@ body {
 }
 
 .card {
-  width: 400x;
-  background: #fff;
-  margin: auto;
-  padding: 10px;
-  width: 450px;
+  width: 400px;
+  background: #fff; 
+  margin: auto; /* 16 px auto (auto centers teh value horizontally) auto = take available leftover space only with width defined
+    1 value → all
+    2 values → vertical | horizontal
+    3 values → top | horizontal | bottom
+    4 values → top | right | bottom | left (clockwise) */
+
+  padding: 10px; /* 8 pixels*/
 }
 
 .title {
   background: #e3f4ff;
   font-size: 16px;
-  padding: 10px;
-  margin-top: 10px;
+  padding: 10px; /*. 8 px */
+  margin-top: 10px; /*.margin-bottom 8px */
 }
 
 .content {
   background: #e3f4ff;
-  padding: 20px;
+  padding: 20px; /*.16px 8 px */
+  /*.margin bottom 8px */
 }
 
 .button-container {
   background: #e3f4ff;
-  display: block;
-  text-align: center;
-  padding: 10px;
-  margin-top: 10px;
+  display: block; /*.not needed */
+  text-align: center; 
+  padding: 10px; /*. 8px */
+  margin-top: 10px; /*.not needed since we used margin-bottom above */
   
 }
 
@@ -39,6 +44,6 @@ button {
   border: 1px solid #eee;
   display: block;
   margin: auto;
-  padding: 10px;
+  padding: 10px; /*. 8px 24px */
 }
 
