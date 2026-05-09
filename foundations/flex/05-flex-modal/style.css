@@ -20,6 +20,11 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  
+  display: flex;
+  padding: 20px;
+  gap: 10px; 
+  /* different sizes*/
 }
 
 .icon {
@@ -33,6 +38,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0; /* Good */
 }
 
 .close-button {
@@ -48,6 +54,7 @@ body {
   justify-content: center;
   border: 1px solid #eee;
   padding: 0;
+  flex-shrink: 0;
 }
 
 button {
@@ -66,4 +73,31 @@ button.cancel {
   background: white;
   border: 1px solid #ddd;
   color: royalblue;
+}
+
+
+
+
+.container { /* keep container as container for top/header: (header text and close button), middle: text, bottom: continue and cancel */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column; 
+  /* No need for this, since container its only to contain the elements on the right side, 
+  normal flow (block) already makes each item into its own row, no need to make it flex box, only to contain */
+  row-gap: 15px;
+  /* no need to but gap between the items, since we are no making container a flex box, only a container
+  can use margins in individual items to separate them*/
+}
+
+.header { /* use it a top container, include header txt and close button inside it, make it flex box, make space between them, 
+  align them change size,font, and add bottom margin to separate from other items inside container*/
+  font-weight: bold;
+  font-size: 20px; 
+}
+
+/* Kept header as .top and included button there, can just use header as flexbox, 
+inside it header text and close button */
+.top {
+  display: flex;
+  justify-content: space-between;
 }
