@@ -1,5 +1,6 @@
 body {
   font-family: 'Courier New', Courier, monospace;
+  /* text align can go here, works for both title and text*/
 }
 
 img {
@@ -23,4 +24,30 @@ img {
   align-items: center;
   justify-content: center;
   background: #eee;
+}
+
+.container {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  margin: 30px; /* can use margin-bottom on title to separate content from title*/
+  
+}
+
+.title {
+  display: flex; /* no need for this, since its alone and we can use text align in body */
+  justify-content: center; /* can use margin bottom-here, to separate content*/
+}
+
+.plant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* 
+  no need to make flexbox here, html already puts items vertically in its normal flow, default behavior of block flow
+  so image goes on top and text below, no need to use flex or flex direction here, 
+  text will already be centered, (body = text-align:center) 
+  */
+  width: 200px; /* we can use max-width, limits width, its not a fixed value, can shrink but cant grow over 200px */
 }
