@@ -5,6 +5,7 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  
 }
 
 img {
@@ -16,6 +17,7 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  padding: 8px;
 }
 
 input {
@@ -23,4 +25,54 @@ input {
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+}
+
+.page { /* Can use body as wrapper */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+/* align-items: center; *//* remove this, align items horizontally. align-items:center removed stretch behavior.
+only become as wide as content, Default: align-items: stretch;, children stretch full width */
+/* let .page overall vertical page structure, let each children control its own layout */
+/* justify-content: center;
+  justify-content: space-between; /*
+  /* justify-content: (center, space, between) used twice, css only reads one, last one remains*/
+  /* no justify-contents: Let .content handle centering itself.*/
+  /* The links looked centered because the entire header flex item became shrink-sized and centered, 
+  not because the links inherited align-items:center.*/
+}
+
+.header, .footer {
+  display: flex;
+  justify-content: space-between;
+   /* width: 100%; */ /* use 100% or remove completely, block elements already stretch*/
+  padding: 15px;
+}
+
+.footer {
+  background-color: #eeeeee;
+}
+
+.left-links, .right-links {
+  display: flex;
+  gap: 15px;
+  list-style-type: none;
+  margin: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  flex: 1; /* missing flex 1: flex: 1 makes content take the remaining vertical space between header and footer.*/
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; 
+}
+
+
+a {
+  text-decoration: none;
+  color: rgb(81, 81, 81);
 }
