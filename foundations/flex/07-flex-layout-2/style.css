@@ -30,11 +30,13 @@ body {
   border-radius: 4px;
 }
 
-.page {
-  height: 100vh;
+.page { /* use body {} as main container*/
+  min-height: 100vh; /* use min-height not height, min-height allows page growth if content needs more space. 
+  height: 100vh can become restrictive.*/
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; /* not needed since on .container, when we use flex:1 (grows) 
+  uses available space and pushes footer down*/ 
 }
 
 
@@ -43,7 +45,7 @@ body {
   align-items: center;
   font-size: 32px;
   font-weight: 900;
-  padding-left: 16px;
+  padding-left: 16px; /* use padding: 0 16px, modifies both lef and right, even is right isn't visible in this example*/
 }
 
 .content {
@@ -57,7 +59,7 @@ body {
   align-items: center;
 }
 
-ul {
+ul { /* can also modify li directly, like li margin-bottom instead of gap. */
   padding: 0;
   margin: 0;
   display: flex;
@@ -65,7 +67,7 @@ ul {
   gap: 10px;
   font-size: 24px;
   list-style-type: none;
-  align-items: flex-start;
+  /* align-items: flex-start; */ /* not needed */ 
 }
 
 a {
@@ -83,6 +85,7 @@ a {
 
 .card {
   width: 300px;
-  height: 250px;
+  /* height: 250px; */ /*not needed*/ 
+  /* Content should usually decide height. Fixed height can create weird empty space or overflow later. */
   padding: 16px;
 }
